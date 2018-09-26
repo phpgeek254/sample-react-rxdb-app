@@ -1,0 +1,26 @@
+{
+  "name": "offline-chat",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^4.0.1",
+    "moment": "^2.22.2",
+    "pouchdb-adapter-http": "^7.0.0",
+    "pouchdb-adapter-idb": "^7.0.0",
+    "pouchdb-server": "^4.1.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5",
+    "react-toastify": "^4.3.2",
+    "rxdb": "^8.0.1",
+    "rxjs": "^6.3.3",
+    "serve": "^10.0.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "server": "pouchdb-server -d ./db",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
